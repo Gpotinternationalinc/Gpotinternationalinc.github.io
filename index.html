@@ -57,52 +57,64 @@
 </header>
 
 
-    <!-- Hero横幅（产品图背景+标题单行） -->
-    <section class="relative text-white py-20 md:py-28 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="Coupling (1).jpg" alt="Coupling Product Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/30"></div>
-        </div>
-        <div class="container mx-auto px-5 md:px-8 relative z-10">
+   <!-- Hero横幅（固定宽高比，图片不变形） -->
+<section class="relative text-white overflow-hidden">
+    <!-- 固定宽高比 21:9，页面缩放时整体等比变化 -->
+    <div class="aspect-[21/9] w-full relative">
+        <!-- 产品背景图 保持比例居中裁切，绝不拉伸 -->
+        <img 
+            src="Coupling (1).jpg" 
+            alt="Coupling Product Background" 
+            class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        <!-- 暗色遮罩 -->
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <!-- 文字内容 垂直居中 -->
+        <div class="absolute inset-0 container mx-auto px-5 md:px-8 flex items-center z-10">
             <div class="max-w-5xl">
-                <!-- 标题强制单行，字号微调 -->
+                <!-- 标题强制单行，字号自适应 -->
                 <h1 class="text-[clamp(1.6rem,3vw,2.8rem)] font-bold leading-tight whitespace-nowrap">
                     API 5CT & 5B Tubing Coupling And Casing Coupling
                 </h1>
-                <p class="mt-5 text-lg md:text-xl text-white/85">
+                <p class="mt-3 md:mt-5 text-base md:text-xl text-white/85">
                     Premium Quality Oil Country Tubular Goods from Trusted Manufacturer
                 </p>
 
-                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                        <div class="text-sm text-white/70">Certification</div>
-                        <div class="mt-1 font-semibold">API 5CT & 5B</div>
+                <!-- 核心参数四格 -->
+                <div class="mt-6 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
+                        <div class="text-xs md:text-sm text-white/70">Certification</div>
+                        <div class="mt-1 text-sm md:text-base font-semibold">API 5CT & 5B</div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                        <div class="text-sm text-white/70">Casing Size</div>
-                        <div class="mt-1 font-semibold">4-1/2" - 20"</div>
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
+                        <div class="text-xs md:text-sm text-white/70">Casing Size</div>
+                        <div class="mt-1 text-sm md:text-base font-semibold">4-1/2" - 20"</div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                        <div class="text-sm text-white/70">Tubing Size</div>
-                        <div class="mt-1 font-semibold">1.050" - 4-1/2"</div>
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
+                        <div class="text-xs md:text-sm text-white/70">Tubing Size</div>
+                        <div class="mt-1 text-sm md:text-base font-semibold">1.050" - 4-1/2"</div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                        <div class="text-sm text-white/70">Thread Types</div>
-                        <div class="mt-1 font-semibold">STC/LTC/BTC/EU/NU</div>
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
+                        <div class="text-xs md:text-sm text-white/70">Thread Types</div>
+                        <div class="mt-1 text-sm md:text-base font-semibold">STC/LTC/BTC/EU/NU</div>
                     </div>
                 </div>
 
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="#products" class="px-7 py-3 bg-white text-primary font-medium rounded hover:bg-gray-100 transition-colors">
+                <!-- 按钮 -->
+                <div class="mt-6 md:mt-10 flex flex-wrap gap-3 md:gap-4">
+                    <a href="#products" class="px-6 md:px-7 py-2.5 md:py-3 bg-white text-primary font-medium rounded hover:bg-gray-100 transition-colors">
                         View Products
                     </a>
-                    <a href="#contact" class="px-7 py-3 border border-white text-white font-medium rounded hover:bg-white/10 transition-colors">
+                    <a href="#contact" class="px-6 md:px-7 py-2.5 md:py-3 border border-white text-white font-medium rounded hover:bg-white/10 transition-colors">
                         Request Quote
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- 产品展示 -->
     <section id="products" class="py-16 md:py-24 bg-industrial">
