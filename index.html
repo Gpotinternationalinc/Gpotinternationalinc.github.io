@@ -57,23 +57,21 @@
 </header>
 
 
-   <!-- Hero横幅（固定宽高比，图片不变形） -->
-<section class="relative text-white overflow-hidden">
-    <!-- 固定宽高比 21:9，页面缩放时整体等比变化 -->
-    <div class="aspect-[21/9] w-full relative">
-        <!-- 产品背景图 保持比例居中裁切，绝不拉伸 -->
+   <!-- Hero横幅（图片居中缩小，不铺满，左右深色背景过渡） -->
+<section class="relative text-white overflow-hidden bg-dark">
+    <div class="aspect-[21/9] w-full relative flex items-center justify-center">
+        <!-- 图片保持原比例，完整显示不裁切 -->
         <img 
             src="Coupling (1).jpg" 
             alt="Coupling Product Background" 
-            class="absolute inset-0 w-full h-full object-cover object-center"
+            class="h-full w-auto max-w-[75%] object-contain object-center"
         >
-        <!-- 暗色遮罩 -->
-        <div class="absolute inset-0 bg-black/30"></div>
+        <!-- 左右渐变过渡，让图片和深色背景自然衔接 -->
+        <div class="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-dark"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
 
-        <!-- 文字内容 垂直居中 -->
         <div class="absolute inset-0 container mx-auto px-5 md:px-8 flex items-center z-10">
             <div class="max-w-5xl">
-                <!-- 标题强制单行，字号自适应 -->
                 <h1 class="text-[clamp(1.6rem,3vw,2.8rem)] font-bold leading-tight whitespace-nowrap">
                     API 5CT & 5B Tubing Coupling And Casing Coupling
                 </h1>
@@ -81,7 +79,6 @@
                     Premium Quality Oil Country Tubular Goods from Trusted Manufacturer
                 </p>
 
-                <!-- 核心参数四格 -->
                 <div class="mt-6 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
                     <div class="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
                         <div class="text-xs md:text-sm text-white/70">Certification</div>
@@ -101,7 +98,6 @@
                     </div>
                 </div>
 
-                <!-- 按钮 -->
                 <div class="mt-6 md:mt-10 flex flex-wrap gap-3 md:gap-4">
                     <a href="#products" class="px-6 md:px-7 py-2.5 md:py-3 bg-white text-primary font-medium rounded hover:bg-gray-100 transition-colors">
                         View Products
@@ -114,6 +110,7 @@
         </div>
     </div>
 </section>
+
 
 
     <!-- 产品展示 -->
