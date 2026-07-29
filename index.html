@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>石油设备产品官网 - 专业油套管接箍供应商</title>
-    <!-- 引入Tailwind CSS，无需本地安装 -->
+    <title>API 5CT & 5B Tubing & Casing Couplings | Gpot International Inc</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 自定义主题色 -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#165DFF',
-                        dark: '#0F172A',
+                        primary: '#0057B8',
+                        dark: '#0A1F35',
+                        industrial: '#F5F7FA',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'Arial', 'sans-serif'],
                     },
                 }
             }
@@ -24,147 +23,356 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow {
-                text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 10px 25px -5px rgba(22, 93, 255, 0.15);
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 87, 184, 0.08);
             }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- 顶部导航栏 -->
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-            <div class="text-xl font-bold text-primary">RUIQISEN PETROLEUM</div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">首页</a>
-                <a href="#products" class="text-gray-700 hover:text-primary transition-colors">产品中心</a>
-                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">关于我们</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系询价</a>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- 顶部导航 -->
+    <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-5 md:px-8 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="logo.png" alt="Gpot International Inc" class="h-12 md:h-14">
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#products" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                <a href="#specification" class="text-gray-700 hover:text-primary transition-colors">Specification</a>
+                <a href="#advantages" class="text-gray-700 hover:text-primary transition-colors">Why Us</a>
+                <a href="#stock" class="text-gray-700 hover:text-primary transition-colors">Stock</a>
+                <a href="#package" class="text-gray-700 hover:text-primary transition-colors">Package</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
             </nav>
-            <a href="#contact" class="hidden md:block px-5 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors">获取报价</a>
-            <!-- 移动端菜单按钮 -->
-            <button class="md:hidden text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <a href="#contact" class="px-5 py-2 bg-primary text-white text-sm rounded hover:bg-primary/90 transition-colors">Get Quote</a>
         </div>
     </header>
 
-    <!-- 首屏Banner -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-primary/90 to-dark text-white">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-3xl">
-                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow">
-                    专业石油设备供应商
+    <!-- 首屏主视觉 -->
+    <section class="bg-gradient-to-br from-dark to-primary text-white py-20 md:py-28">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="max-w-4xl">
+                <h1 class="text-[clamp(1.8rem,4vw,3.2rem)] font-bold leading-tight">
+                    API 5CT & 5B Tubing Coupling And Casing Coupling
                 </h1>
-                <p class="mt-6 text-lg md:text-xl text-white/90">
-                    专注油套管接箍、钻采配件生产出口，符合API标准，远销中东、非洲、东南亚市场
+                <p class="mt-5 text-lg md:text-xl text-white/85">
+                    Premium Quality Oil Country Tubular Goods from Trusted Manufacturer
                 </p>
+
+                <!-- 核心规格亮点 -->
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="text-sm text-white/70">Certification</div>
+                        <div class="mt-1 font-semibold">API 5CT & 5B</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="text-sm text-white/70">Casing Size</div>
+                        <div class="mt-1 font-semibold">4-1/2" - 20"</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="text-sm text-white/70">Tubing Size</div>
+                        <div class="mt-1 font-semibold">1.050" - 4-1/2"</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="text-sm text-white/70">Thread Types</div>
+                        <div class="mt-1 font-semibold">STC/LTC/BTC/EU/NU</div>
+                    </div>
+                </div>
+
                 <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="#products" class="px-8 py-3 bg-white text-primary font-medium rounded-md hover:bg-gray-100 transition-colors">
-                        查看产品
+                    <a href="#products" class="px-7 py-3 bg-white text-primary font-medium rounded hover:bg-gray-100 transition-colors">
+                        View Products
                     </a>
-                    <a href="#contact" class="px-8 py-3 border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors">
-                        立即询价
+                    <a href="#contact" class="px-7 py-3 border border-white text-white font-medium rounded hover:bg-white/10 transition-colors">
+                        Request Quote
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 规格参数区 -->
+    <section id="specification" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Product Specification</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Manufactured in strict accordance with API 5CT and 5B standards
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-industrial rounded-xl p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="font-bold text-dark mb-2">Size Range</h3>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Casing: 4-1/2" to 20"</li>
+                            <li>• Tubing: 1.050" to 4-1/2"</li>
+                            <li>• Premium thread: 2-3/8" ~ 9-5/8"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-dark mb-2">Standard Thread</h3>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• STC (Short Thread)</li>
+                            <li>• LTC (Long Thread)</li>
+                            <li>• BTC (Buttress Thread)</li>
+                            <li>• EU / NU</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-dark mb-2">Premium Thread</h3>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• TTGM-4 (VAM TOP Interchangeable)</li>
+                            <li>• New Vam</li>
+                            <li>• Big Omega</li>
+                            <li>• TSH PH6 interchangeable</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-gray-600">
+                    * CAL IV test certificate available for premium thread connections. All standard steel grades: J55, K55, N80, L80, P110, Q125.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- 产品展示区 -->
-    <section id="products" class="py-16 md:py-24">
-        <div class="container mx-auto px-4 md:px-6">
+    <section id="products" class="py-16 md:py-24 bg-industrial">
+        <div class="container mx-auto px-5 md:px-8">
             <div class="text-center mb-14">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark">主营产品</h2>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">严格遵循API 5B、API 5L标准，提供多种钢级与规格的石油管材配件</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Our Products</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Complete range of API 5CT & 5B certified couplings for oil and gas well applications
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- 产品卡片1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400">
-                        产品图片
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 产品1：套管接箍 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:shadow-lg transition-shadow">
+                    <div class="h-52 overflow-hidden bg-gray-200">
+                        <img src="product1.jpg" alt="Casing Coupling" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-semibold text-dark">油管接箍</h3>
-                        <p class="mt-2 text-sm text-gray-600">EUE/NUE扣型，J55/K55/N80钢级，规格齐全</p>
-                        <a href="#contact" class="mt-4 inline-block text-primary text-sm font-medium hover:underline">查看详情 →</a>
-                    </div>
-                </div>
-
-                <!-- 产品卡片2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400">
-                        产品图片
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-semibold text-dark">套管接箍</h3>
-                        <p class="mt-2 text-sm text-gray-600">STC/LTC/BTC扣型，P110/L80钢级，高精度加工</p>
-                        <a href="#contact" class="mt-4 inline-block text-primary text-sm font-medium hover:underline">查看详情 →</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Casing Coupling</h3>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            High-strength couplings for casing strings in oil and gas wells.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                            <li><span class="font-medium">Size:</span> 4-1/2" to 20"</li>
+                            <li><span class="font-medium">Grades:</span> J55 / K55 / L80 / N80 / P110 / Q125</li>
+                            <li><span class="font-medium">Threads:</span> STC / LTC / BTC</li>
+                        </ul>
+                        <a href="#contact" class="mt-5 inline-block text-primary font-medium text-sm hover:underline">
+                            Learn More →
+                        </a>
                     </div>
                 </div>
 
-                <!-- 产品卡片3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400">
-                        产品图片
+                <!-- 产品2：油管接箍 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:shadow-lg transition-shadow">
+                    <div class="h-52 overflow-hidden bg-gray-200">
+                        <img src="product2.jpg" alt="Tubing Coupling" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-semibold text-dark">钻杆接头</h3>
-                        <p class="mt-2 text-sm text-gray-600">API标准扣型，AISI 4130材质，耐高压腐蚀</p>
-                        <a href="#contact" class="mt-4 inline-block text-primary text-sm font-medium hover:underline">查看详情 →</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Tubing Coupling</h3>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            Precision couplings for tubing strings meeting API 5CT standards.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                            <li><span class="font-medium">Size:</span> 1.050" to 4-1/2"</li>
+                            <li><span class="font-medium">Grades:</span> J55 / L80 / N80 / C90 / T95 / P110</li>
+                            <li><span class="font-medium">Threads:</span> EU / NU / Premium</li>
+                        </ul>
+                        <a href="#contact" class="mt-5 inline-block text-primary font-medium text-sm hover:underline">
+                            Learn More →
+                        </a>
                     </div>
                 </div>
 
-                <!-- 产品卡片4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400">
-                        产品图片
+                <!-- 产品3：特殊扣接箍 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow hover:shadow-lg transition-shadow">
+                    <div class="h-52 overflow-hidden bg-gray-200">
+                        <img src="product3.jpg" alt="Premium Thread Coupling" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-semibold text-dark">变径接头</h3>
-                        <p class="mt-2 text-sm text-gray-600">支持定制规格，磷化/发黑表面处理，探伤检测</p>
-                        <a href="#contact" class="mt-4 inline-block text-primary text-sm font-medium hover:underline">查看详情 →</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Premium Thread Coupling</h3>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            High performance premium connections for severe well conditions.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-700">
+                            <li><span class="font-medium">Size:</span> 2-3/8" ~ 9-5/8"</li>
+                            <li><span class="font-medium">Types:</span> TTGM-4 / New Vam / Big Omega</li>
+                            <li><span class="font-medium">Cert:</span> CAL IV Test Certificate</li>
+                        </ul>
+                        <a href="#contact" class="mt-5 inline-block text-primary font-medium text-sm hover:underline">
+                            Learn More →
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 关于我们 -->
-    <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="h-80 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                    工厂/车间图片
-                </div>
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark">关于我们</h2>
-                    <p class="mt-6 text-gray-600 leading-relaxed">
-                        我们是一家专注石油钻采设备研发与生产的制造企业，拥有现代化生产车间与完整的检测体系，产品严格执行API国际标准。
-                        多年来深耕海外市场，为全球石油开采企业提供高品质管材配件与一站式解决方案。
+    <!-- 核心优势 -->
+    <section id="advantages" class="py-16 md:py-24">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Why Choose Gpot International</h2>
+                <p class="mt-4 text-gray-600">Reliable partner for your OCTG sourcing needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                        ✓
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-dark">API Certified Quality</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                        All products meet strict API 5CT and 5B standards for reliable performance in downhole environments.
                     </p>
-                    <div class="mt-8 grid grid-cols-3 gap-4">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">15+</div>
-                            <div class="mt-1 text-sm text-gray-500">行业经验</div>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                        ◈
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-dark">Wide Size Range & Grades</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                        Complete spectrum from J55 to P110, sizes 1.050" to 20" available for all well conditions.
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                        ⚙
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-dark">Premium Thread Options</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                        VAM TOP, New VAM, Big Omega and other premium thread connections for high-pressure wells.
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                        🚚
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-dark">Fast Delivery & Global Shipping</h3>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                        Ready stock with immediate delivery and worldwide logistics support to any major port.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 现货展示区 -->
+    <section id="stock" class="py-16 md:py-24 bg-dark text-white">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold">Stock Display</h2>
+                    <p class="mt-5 text-xl text-white/80 font-medium">
+                        Immediate Delivery Available - Large Inventory Capacity
+                    </p>
+                    <p class="mt-6 text-white/70 leading-relaxed">
+                        We maintain a large inventory of standard couplings in various sizes and grades, ensuring fast delivery for urgent orders.
+                        All stock items are fully inspected with complete MTC documentation available upon request.
+                    </p>
+                    <ul class="mt-8 space-y-3 text-white/80">
+                        <li>✅ Large stock of API 5CT standard couplings</li>
+                        <li>✅ Full traceability & material test reports</li>
+                        <li>✅ Fast loading & shipping from Tianjin port</li>
+                        <li>✅ Custom marking & packaging available</li>
+                    </ul>
+                    <a href="#contact" class="mt-10 inline-block px-7 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition-colors">
+                        Check Stock Availability
+                    </a>
+                </div>
+
+                <!-- 库存产品图 -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-40 rounded-lg overflow-hidden">
+                        <img src="product1.jpg" alt="Warehouse Stock" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-40 rounded-lg overflow-hidden">
+                        <img src="product2.jpg" alt="Product Marking" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-40 rounded-lg overflow-hidden">
+                        <img src="product3.jpg" alt="Packing Detail" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-40 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center text-white/50 text-sm">
+                        More Products
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 包装运输板块 -->
+    <section id="package" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Package & Shippment</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Standard export packaging ensures safe and intact delivery to your destination
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 左侧图片组 -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-48 rounded-lg overflow-hidden bg-gray-200">
+                        <img src="product2.jpg" alt="Thread Protection" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-48 rounded-lg overflow-hidden bg-gray-200">
+                        <img src="product3.jpg" alt="Bundled Packing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-48 rounded-lg overflow-hidden bg-gray-200 col-span-2">
+                        <img src="product1.jpg" alt="Container Loading" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 右侧文字说明 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-dark">Professional Export Packaging Solution</h3>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        All couplings are packaged in strict accordance with OCTG export standards to avoid damage, rust and collision during long-distance sea transportation and storage.
+                    </p>
+
+                    <div class="mt-8 space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">✓</div>
+                            <div>
+                                <h4 class="font-semibold text-dark">Thread Protection</h4>
+                                <p class="text-sm text-gray-600 mt-1">Thread area coated with anti-rust grease, protected by plastic caps at both ends to prevent bump and corrosion.</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">30+</div>
-                            <div class="mt-1 text-sm text-gray-500">出口国家</div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">✓</div>
+                            <div>
+                                <h4 class="font-semibold text-dark">Standard Export Packing</h4>
+                                <p class="text-sm text-gray-600 mt-1">Steel strip bundling for bulk cargo; wooden cases or pallets for small sizes. Clear marking of size, grade, heat No. and batch No.</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">API</div>
-                            <div class="mt-1 text-sm text-gray-500">认证资质</div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">✓</div>
+                            <div>
+                                <h4 class="font-semibold text-dark">Flexible Shipping Terms</h4>
+                                <p class="text-sm text-gray-600 mt-1">Support FOB Tianjin, CFR, CIF and EXW trade terms. Both FCL and LCL shipments are available to global ports.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">✓</div>
+                            <div>
+                                <h4 class="font-semibold text-dark">Full Shipping Documents</h4>
+                                <p class="text-sm text-gray-600 mt-1">Complete set of documents provided: Packing List, Commercial Invoice, MTC, Bill of Lading and Certificate of Origin.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -173,44 +381,46 @@
     </section>
 
     <!-- 询价表单 -->
-    <section id="contact" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-3xl mx-auto">
+    <section id="contact" class="py-16 md:py-24 bg-industrial">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark">获取产品报价</h2>
-                    <p class="mt-4 text-gray-600">填写您的需求，我们将在24小时内为您提供详细报价</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark">Request A Quote</h2>
+                    <p class="mt-4 text-gray-600">
+                        Tell us your requirements, we will reply within 24 hours with detailed quotation.
+                    </p>
                 </div>
 
-                <form class="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                <form class="bg-white p-6 md:p-10 rounded-xl card-shadow">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">您的姓名</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="请输入姓名">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                            <input type="text" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="Your company">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">邮箱地址</label>
-                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="your@email.com">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Contact Person</label>
+                            <input type="text" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="Your name">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">公司名称</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="请输入公司名">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="your@email.com">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">需求产品</label>
-                            <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
-                                <option>油管接箍</option>
-                                <option>套管接箍</option>
-                                <option>钻杆接头</option>
-                                <option>其他定制产品</option>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Product Type</label>
+                            <select class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary">
+                                <option>Casing Coupling</option>
+                                <option>Tubing Coupling</option>
+                                <option>Premium Thread Coupling</option>
+                                <option>Other Products</option>
                             </select>
                         </div>
                     </div>
                     <div class="mt-6">
-                        <label class="block text-sm font-medium text-gray-700 mb-2">详细需求</label>
-                        <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="请描述规格、数量、材质等要求"></textarea>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Requirement Details</label>
+                        <textarea rows="4" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="Please specify size, grade, thread type, quantity and destination port..."></textarea>
                     </div>
                     <button type="submit" class="mt-8 w-full py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
-                        提交询价
+                        Submit Inquiry
                     </button>
                 </form>
             </div>
@@ -218,40 +428,44 @@
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-dark text-white/80 py-12">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="bg-dark text-white/70 py-12">
+        <div class="container mx-auto px-5 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
-                    <div class="text-xl font-bold text-white">RUIQISEN PETROLEUM</div>
-                    <p class="mt-4 text-sm leading-relaxed">
-                        专业石油设备制造商，致力于为全球客户提供高品质管材配件与技术服务。
+                    <div class="flex items-center mb-4">
+                        <img src="logo.png" alt="Gpot International Inc" class="h-10">
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Professional manufacturer and supplier of API 5CT & 5B tubing and casing couplings, serving global oil and gas industry.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-medium mb-4">快速链接</h4>
+                    <h4 class="text-white font-medium mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-white transition-colors">首页</a></li>
-                        <li><a href="#products" class="hover:text-white transition-colors">产品中心</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">关于我们</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#specification" class="hover:text-white transition-colors">Specification</a></li>
+                        <li><a href="#stock" class="hover:text-white transition-colors">Stock Display</a></li>
+                        <li><a href="#package" class="hover:text-white transition-colors">Package & Shippment</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-medium mb-4">联系方式</h4>
+                    <h4 class="text-white font-medium mb-4">Contact Info</h4>
                     <ul class="space-y-2 text-sm">
-                        <li>地址：天津市河北区</li>
-                        <li>邮箱：sales@ruiqi-sen.com</li>
-                        <li>电话：+86 022-xxxxxxx</li>
+                        <li>📍 30 N GOULD ST STE 41398 SHERIDAN, WY 82801</li>
+                        <li>📧 wangxin8611@126.com</li>
+                        <li>📱 +1 307 435 9435</li>
+                        <li>🚢 Port of Tianjin / Qingdao</li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-10 pt-6 border-t border-white/10 text-center text-sm text-white/60">
-                © 2026 Ruiqisen Petroleum Equipment Co., Ltd. All rights reserved.
+            <div class="mt-10 pt-6 border-t border-white/10 text-center text-sm text-white/50">
+                © 2026 Gpot International Inc. All rights reserved. | API 5CT & 5B Certified
             </div>
         </div>
     </footer>
 
-    <!-- 平滑滚动脚本 -->
+    <!-- 平滑滚动效果 -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -259,7 +473,7 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if(target) {
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: target.offsetTop - 70,
                         behavior: 'smooth'
                     });
                 }
