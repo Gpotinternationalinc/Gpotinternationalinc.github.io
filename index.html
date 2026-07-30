@@ -249,23 +249,25 @@
 
 
     <!-- Downloads 低矮紧凑板块 -->
-    <section id="downloads" class="py-10 bg-bgLightGray">
-        <div class="w-full">
-            <div class="bg-white p-8 rounded-xl shadow-md">
-                <h2 class="text-[clamp(1.8rem,2.5vw,2.2rem)] font-bold text-mainBlue mb-4">Download Specifications</h2>
-                <p class="text-base text-grayText mb-6">
-                    Download our complete product specification sheet for detailed technical information including dimensions, tolerances, and testing requirements.
-                </p>
-                <button class="bg-orangeAccent text-white px-7 py-3.5 rounded-lg font-medium text-lg hover:opacity-90 transition flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                    </svg>
-                    Download PDF Specification Sheet
-                </button>
-            </div>
-        </div>
-    </section>
+   <section class="py-16 bg-[#F2F5F8]">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- 增加 text-center 实现内部全部居中 -->
+    <div class="bg-white rounded-xl p-10 shadow-md text-center">
+      <h2 class="text-[clamp(1.8rem,3vw,2.4rem)] font-bold text-mainBlue mb-4">Download Specifications</h2>
+      <p class="text-grayText mb-8 max-w-4xl mx-auto">
+        Download our complete product specification sheet for detailed technical information including dimensions, tolerances, and testing requirements.
+      </p>
+      <!-- inline-block 保证按钮正常居中 -->
+      <a href="Coupling Catalog.pdf" class="inline-flex items-center gap-3 bg-[#D87918] text-white px-8 py-4 rounded-lg text-lg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14m0 0l-7-7m7 7l7-7"></path>
+        </svg>
+        Download PDF Coupling Catalog
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Quote 加宽表单 -->
     <section id="quote" class="py-12 bg-[#f8fafc]">
