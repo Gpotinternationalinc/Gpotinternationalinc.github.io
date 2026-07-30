@@ -268,16 +268,16 @@
   </div>
 </section>
 
-    <!-- Quote 加宽表单 -->
-  <section class="py-16 bg-[#f8fafc]">
+ <!-- Quote 加宽表单 -->
+<section class="py-16 bg-[#f8fafc]">
   <div class="max-w-5xl mx-auto px-4">
     <div class="text-center mb-10">
       <h2 class="text-[clamp(1.8rem,3vw,2.4rem)] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
       <p class="text-grayText">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
     </div>
 
-    <!-- 白色表单卡片：整体放大，但外部区块高度不额外撑高 -->
-    <div class="bg-white rounded-xl p-6 max-w-3xl mx-auto shadow-sm">
+    <!-- 白色表单卡片，加宽优化 -->
+    <div class="bg-white rounded-xl p-8 max-w-4xl mx-auto shadow-sm">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div>
           <label class="block mb-2 font-medium">Company Name</label>
@@ -312,44 +312,48 @@
   </div>
 </section>
 
-<!-- 完整页脚 -->
+<!-- 完整页脚【修复嵌套BUG版本】 -->
 <footer class="bg-mainBlue text-white py-12">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-             <div>
-  <!-- Logo + 公司名称 横向排列 -->
-  <div class="flex items-center gap-3 mb-3">
-    <img src="logo.jpg" alt="Gpot International Inc" class="h-8 w-auto">
-    <h3 class="text-lg font-bold">Gpot International Inc</h3>
-  </div>
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- 左侧Logo+公司介绍（已修复多余div嵌套） -->
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="logo.jpg" alt="Gpot International Inc" class="h-8 w-auto">
+          <h3 class="text-lg font-bold">Gpot International Inc</h3>
+        </div>
+        <p class="text-white/70 text-sm leading-relaxed">
+          Professional API 5CT&5B oil country tubular goods coupling manufacturer and international supplier.
+        </p>
+      </div>
 
-                <p class="text-white/70 text-sm leading-relaxed">
-                   Professional API 5CT&5B oil country tubular goods coupling manufacturer and international supplier.
-                </p>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-3">⭐Quick Links</h3>
-                <ul class="space-y-2 text-white/70 text-sm">
-                    <li><a href="#products" class="hover:text-white transition">Products</a></li>
-                    <li><a href="#whyus" class="hover:text-white transition">Why Us</a></li>
-                    <li><a href="#downloads" class="hover:text-white transition">Downloads</a></li>
-                    <li><a href="#quote" class="hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-3">Contact Information</h3>
-                <ul class="space-y-2 text-white/70 text-sm">
-                    <li>🌏 30 N GOULD ST #41398 SHERIDAN, WY 82801 USA</li>
-                    <li>📧 wangxin8611@126.com</li>
-                    <li>📱 +1 307 435 9435</li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-white/20 pt-6 text-center text-white/60 text-sm">
-            © 2026 Gpot International Inc. All rights reserved. | API 5CT &amp; 5B OCTG Coupling Manufacturer
-        </div>
+      <!-- 中间快速导航 -->
+      <div>
+        <h3 class="text-lg font-bold mb-3">⭐Quick Links</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#products" class="hover:text-white transition-colors">Products</a></li>
+          <li><a href="#whyus" class="hover:text-white transition-colors">Why Us</a></li>
+          <li><a href="#downloads" class="hover:text-white transition-colors">Downloads</a></li>
+          <li><a href="#quote" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- 右侧联系方式 -->
+      <div>
+        <h3 class="text-lg font-bold mb-3">Contact Information</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li>🌏 30 N GOULD ST #41398 SHERIDAN, WY 82801 USA</li>
+          <li>📧 wangxin8611@126.com</li>
+          <li>📱 +1 307 435 9435</li>
+        </ul>
+      </div>
     </div>
+
+    <!-- 底部版权栏 -->
+    <div class="border-t border-white/20 pt-6 text-center text-white/60 text-sm">
+      © 2026 Gpot International Inc. All rights reserved. | API 5CT &amp; 5B OCTG Coupling Manufacturer
+    </div>
+  </div>
 </footer>
 
 </body>
