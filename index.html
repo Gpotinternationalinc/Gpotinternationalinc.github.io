@@ -267,38 +267,50 @@
   </div>
 </section>
 
-    <div class="bg-white rounded-xl p-8 max-w-4xl mx-auto border border-gray-200 shadow-sm">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-    <div>
-      <label class="block mb-2 font-medium">Company Name</label>
-      <input type="text" class="w-full border border-gray-400 rounded px-4 py-3" placeholder="Your company name">
+<!-- Quote 表单板块 -->
+<section class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-[clamp(1.8rem,3vw,2.4rem)] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
+      <p class="text-grayText">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
     </div>
-    <div>
-      <label class="block mb-2 font-medium">Contact Person</label>
-      <input type="text" class="w-full border border-gray-400 rounded px-4 py-3" placeholder="Your full name">
+
+    <!-- 表单卡片：背景改为浅灰色，区分页面底色 -->
+    <div class="bg-[#f7f8fa] rounded-xl p-8 max-w-4xl mx-auto border border-gray-200 shadow-sm">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="block mb-2 font-medium">Company Name</label>
+          <input type="text" class="w-full border border-gray-400 rounded px-4 py-3 bg-white" placeholder="Your company name">
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Contact Person</label>
+          <input type="text" class="w-full border border-gray-400 rounded px-4 py-3 bg-white" placeholder="Your full name">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="block mb-2 font-medium">Email Address</label>
+          <input type="email" class="w-full border border-gray-400 rounded px-4 py-3 bg-white" placeholder="business@company.com">
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Product Type</label>
+          <select class="w-full border border-gray-400 rounded px-4 py-3 bg-white">
+            <option>Casing Coupling</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label class="block mb-2 font-medium">Requirement Details</label>
+        <textarea rows="5" class="w-full border border-gray-400 rounded px-4 py-3 bg-white" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..."></textarea>
+      </div>
+
+      <button class="w-full bg-blue-600 text-white py-3.5 rounded-lg font-medium text-lg">Submit Inquiry</button>
     </div>
   </div>
+</section>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-    <div>
-      <label class="block mb-2 font-medium">Email Address</label>
-      <input type="email" class="w-full border border-gray-400 rounded px-4 py-3" placeholder="business@company.com">
-    </div>
-    <div>
-      <label class="block mb-2 font-medium">Product Type</label>
-      <select class="w-full border border-gray-400 rounded px-4 py-3 bg-white">
-        <option>Casing Coupling</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="mb-5">
-    <label class="block mb-2 font-medium">Requirement Details</label>
-    <textarea rows="5" class="w-full border border-gray-400 rounded px-4 py-3" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..."></textarea>
-  </div>
-
-  <button class="w-full bg-blue-600 text-white py-3.5 rounded-lg font-medium text-lg">Submit Inquiry</button>
-</div>
 
 
 <!-- 完整页脚【修复嵌套BUG版本】 -->
