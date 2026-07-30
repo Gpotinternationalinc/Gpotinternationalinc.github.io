@@ -35,26 +35,30 @@
 </head>
 <body class="bg-white font-sans text-grayText">
 
-<!-- 顶部导航栏 -->
+<!-- 顶部导航栏【全屏背景 + 内容居中固定宽度】 -->
 <header class="shadow-sm sticky top-0 bg-white z-50">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-       <a href="#" class="flex items-center gap-2">
-    <img src="logo.png" alt="Gpot International" class="h-10 w-auto">
-    <span class="text-[1.6rem] font-bold text-mainBlue">Gpot International</span>
-</a>
+    <!-- 背景通栏容器 -->
+    <div class="w-full">
+        <!-- 内容限制宽度，和网站主体保持一致 -->
+        <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <img src="logo.png" alt="Gpot International" class="h-10 w-auto">
+                <span class="text-[1.6rem] font-bold text-mainBlue">Gpot International</span>
+            </a>
 
+            <nav class="hidden md:flex gap-8 text-mainBlue font-medium">
+                <a href="#products">Products</a>
+                <a href="#whyus">Why Us</a>
+                <a href="#packaging">Package & Shipment</a>
+                <a href="#downloads">Downloads</a>
+                <a href="#quote">Quote</a>
+            </nav>
 
-        <nav class="hidden md:flex gap-8 text-mainBlue font-medium">
-            <a href="#products">Products</a>
-            <a href="#whyus">Why Us</a>
-            <a href="#packaging">Package & Shipment</a>
-            <a href="#downloads">Downloads</a>
-            <a href="#quote">Quote</a>
-        </nav>
-
-        <button class="md:hidden text-mainBlue text-2xl">☰</button>
+            <button class="md:hidden text-mainBlue text-2xl">☰</button>
+        </div>
     </div>
 </header>
+
 
 <!-- 首屏Banner背景图 -->
 <section class="relative text-white overflow-hidden">
