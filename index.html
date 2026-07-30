@@ -270,48 +270,49 @@
 
 
     <!-- Quote 加宽表单 -->
-    <section id="quote" class="py-12 bg-[#f8fafc]">
-        <div class="text-center mb-8">
-            <h2 class="text-[clamp(1.5rem,2vw,2rem)] font-bold text-mainBlue">Request A Free Quote</h2>
-            <p class="text-sm text-grayText max-w-2xl mx-auto">
-                Send your product requirements, we will reply with detailed quotation within 24 hours
-            </p>
+    <section class="py-16 bg-[#f8fafc]">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-[clamp(1.8rem,3vw,2.4rem)] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
+      <p class="text-grayText">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
+    </div>
+
+    <!-- 表单卡片：max-w 放大，由原来尺寸拓宽 -->
+    <div class="bg-white rounded-xl p-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label class="block mb-2 font-medium">Company Name</label>
+          <input type="text" class="w-full border border-gray-300 rounded px-4 py-3.5" placeholder="Your company name">
         </div>
-        <div class="max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-sm">
-            <form>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                        <label class="block mb-1.5 text-sm font-medium text-gray-800">Company Name</label>
-                        <input type="text" placeholder="Your company name" class="w-full border border-gray-300 rounded px-3 py-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="block mb-1.5 text-sm font-medium text-gray-800">Contact Person</label>
-                        <input type="text" placeholder="Your full name" class="w-full border border-gray-300 rounded px-3 py-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="block mb-1.5 text-sm font-medium text-gray-800">Email Address</label>
-                        <input type="email" placeholder="business@company.com" class="w-full border border-gray-300 rounded px-3 py-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="block mb-1.5 text-sm font-medium text-gray-800">Product Type</label>
-                        <select class="w-full border border-gray-300 rounded px-3 py-2.5 bg-white text-sm">
-                            <option>Casing Coupling</option>
-                            <option>Tubing Coupling</option>
-                            <option>Coupling Blank</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="mb-5">
-                    <label class="block mb-1.5 text-sm font-medium text-gray-800">Requirement Details</label>
-                    <textarea rows="5" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..." class="w-full border border-gray-300 rounded px-3 py-2.5 text-sm resize-y"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-primaryBlue text-white py-3 rounded font-medium text-base hover:bg-[#0042a3] transition">
-                    Submit Inquiry
-                </button>
-            </form>
+        <div>
+          <label class="block mb-2 font-medium">Contact Person</label>
+          <input type="text" class="w-full border border-gray-300 rounded px-4 py-3.5" placeholder="Your full name">
         </div>
-    </section>
-</div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label class="block mb-2 font-medium">Email Address</label>
+          <input type="email" class="w-full border border-gray-300 rounded px-4 py-3.5" placeholder="business@company.com">
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Product Type</label>
+          <select class="w-full border border-gray-300 rounded px-4 py-3.5 bg-white">
+            <option>Casing Coupling</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label class="block mb-2 font-medium">Requirement Details</label>
+        <textarea rows="6" class="w-full border border-gray-300 rounded px-4 py-3.5" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..."></textarea>
+      </div>
+
+      <button class="w-full bg-blue-600 text-white py-4 rounded-lg font-medium text-lg">Submit Inquiry</button>
+    </div>
+  </div>
+</section>
+
 
 <!-- 完整页脚 -->
 <footer class="bg-mainBlue text-white py-12">
