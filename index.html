@@ -45,30 +45,32 @@
 <body class="bg-white font-sans text-grayText">
 
 <header class="shadow-sm sticky top-0 bg-white z-50">
-    <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-        <a href="#" class="flex items-center gap-2">
-            <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-10 w-auto">
-            <span class="text-[1.4rem] md:text-[1.6rem] font-bold text-mainBlue">Gpot International Inc</span>
-        </a>
-        <!-- PC导航 -->
-        <nav class="hidden md:flex gap-6">
-            <a href="#products" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Products</a>
-            <a href="#whyus" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Why Us</a>
-            <a href="#downloads" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Downloads</a>
-            <a href="#quote" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Quote</a>
-        </nav>
-        <!-- 手机汉堡按钮 -->
-        <button id="menuBtn" class="md:hidden text-[#0c2b55] text-3xl">☰</button>
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-3">
+    <div class="flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2">
+        <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-12 md:h-14 w-auto">
+        <span class="text-[1.4rem] md:text-[1.6rem] font-bold text-mainBlue">Gpot International Inc</span>
+      </a>
+      <!-- PC端导航，手机自动隐藏 -->
+      <nav class="hidden md:flex gap-7">
+        <a href="#products" class="text-base text-gray-700 hover:text-mainBlue">Products</a>
+        <a href="#whyus" class="text-base text-gray-700 hover:text-mainBlue">Why Us</a>
+        <a href="#downloads" class="text-base text-gray-700 hover:text-mainBlue">Downloads</a>
+        <a href="#quote" class="text-base text-gray-700 hover:text-mainBlue">Quote</a>
+      </nav>
+      <!-- 手机汉堡按钮，只手机显示 -->
+      <button id="menuBtn" class="md:hidden text‑2xl text‑[#0c2b55]">☰</button>
     </div>
     <!-- 手机下拉菜单 -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-        <div class="flex flex-col px-4 py-3 gap-3">
-            <a href="#products" class="text-lg font-bold text-[#0c2b55] py-2">Products</a>
-            <a href="#whyus" class="text-lg font-bold text-[#0c2b55] py-2">Why Us</a>
-            <a href="#downloads" class="text-lg font-bold text-[#0c2b55] py-2">Downloads</a>
-            <a href="#quote" class="text-lg font-bold text-[#0c2b55] py-2">Quote</a>
-        </div>
+    <div id="mobileMenu" class="md:hidden hidden pb-3">
+      <div class="flex flex-col gap-3">
+        <a href="#products" class="py-2 text-gray-700">Products</a>
+        <a href="#whyus" class="py-2 text-gray-700">Why Us</a>
+        <a href="#downloads" class="py-2 text-gray-700">Downloads</a>
+        <a href="#quote" class="py-2 text-gray-700">Quote</a>
+      </div>
     </div>
+  </div>
 </header>
 
 <section class="banner-wrap">
