@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- 关键：关闭移动端缩放适配，强制桌面布局 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gpot International Inc - Professional API 5CT & 5B certified tubing and casing coupling manufacturer. Premium OCTG products with full size & grade range, fast delivery and complete export documentation.">
     <title>Gpot International Inc | API 5CT Tubing & Casing Coupling</title>
 
@@ -12,20 +11,18 @@
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.6; background: #fff; -webkit-font-smoothing: antialiased; }
-        header { background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 50; }
-        
-        .banner-wrap { position: relative; color: #fff; overflow: hidden; height: 340px; }
-        .banner-wrap img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-        .banner-mask { position: absolute; inset: 0; background: rgba(0,0,0,0.42); }
-        .banner-content { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; }
-        
-        h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.3; white-space: nowrap; }
-        
+        body { font-family: 'Inter', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.6; background: #ffffff; -webkit-font-smoothing: antialiased; }
+        header { background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 50; }
+        a { text-decoration: none; }
         html { scroll-behavior: smooth; }
         input, select, textarea { outline: none; font-family: inherit; }
         img { max-width: 100%; display: block; }
-        a { text-decoration: none; }
+        .banner-wrap { position: relative; color: #fff; overflow: hidden; height: 340px; }
+        @media (max-width:768px){
+            .banner-wrap{height:240px;}
+        }
+        .banner-wrap img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+        .banner-mask { position: absolute; inset: 0; background-color: rgba(0,0,0,0.42); }
     </style>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,14 +32,10 @@
                 extend: {
                     colors: {
                         mainBlue: '#093066',
-                        primaryBlue: '#0052cc',
                         orangeAccent: '#d47814',
                         grayText: '#475569',
                         bgLightGray: '#F2F5F8',
                         cardGray: '#E9EDF2'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Arial', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif']
                     }
                 }
             }
@@ -51,43 +44,43 @@
 </head>
 <body class="bg-white font-sans text-grayText">
 
-<!-- 顶部导航栏：永远显示桌面菜单，没有汉堡按钮 -->
 <header class="shadow-sm sticky top-0 bg-white z-50">
-    <div class="w-full">
-        <div class="max-w-[1440px] mx-auto px-8 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2">
-                <img src="logo.jpg" alt="Gpot International Inc" class="h-10 w-auto" width="40" height="40">
-                <span class="text-[1.6rem] font-bold text-mainBlue">Gpot International Inc</span>
-            </a>
-
-            <!-- 导航永远显示，不隐藏 -->
-            <nav class="flex gap-6">
-              <a href="#products" class="text-xl font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Products</a>
-              <a href="#whyus" class="text-xl font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Why Us</a>
-              <a href="#downloads" class="text-xl font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Downloads</a>
-              <a href="#quote" class="text-xl font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Quote</a>
-            </nav>
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2">
+            <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-10 w-auto">
+            <span class="text-[1.4rem] md:text-[1.6rem] font-bold text-mainBlue">Gpot International Inc</span>
+        </a>
+        <!-- PC导航 -->
+        <nav class="hidden md:flex gap-6">
+            <a href="#products" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Products</a>
+            <a href="#whyus" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Why Us</a>
+            <a href="#downloads" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Downloads</a>
+            <a href="#quote" class="text-lg font-bold text-[#0c2b55] hover:text-[#1a4b94] transition-colors">Quote</a>
+        </nav>
+        <!-- 手机汉堡按钮 -->
+        <button id="menuBtn" class="md:hidden text-[#0c2b55] text-3xl">☰</button>
+    </div>
+    <!-- 手机下拉菜单 -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <div class="flex flex-col px-4 py-3 gap-3">
+            <a href="#products" class="text-lg font-bold text-[#0c2b55] py-2">Products</a>
+            <a href="#whyus" class="text-lg font-bold text-[#0c2b55] py-2">Why Us</a>
+            <a href="#downloads" class="text-lg font-bold text-[#0c2b55] py-2">Downloads</a>
+            <a href="#quote" class="text-lg font-bold text-[#0c2b55] py-2">Quote</a>
         </div>
     </div>
 </header>
 
-<!-- Banner 区 -->
-<section class="relative text-white overflow-hidden banner-wrap">
+<section class="banner-wrap">
     <div class="w-full h-full relative">
-        <img 
-            src="m.jpg" 
-            alt="API 5CT & 5B Tubing Coupling and Casing Coupling"
-            class="absolute inset-0 w-full h-full object-cover object-center"
-            width="1440" height="340"
-            fetchpriority="high"
-        >
-        <div class="absolute inset-0 bg-black/40 banner-mask"></div>
-        <div class="absolute inset-0 max-w-[1440px] mx-auto px-8 flex items-center banner-content">
+        <img src="m.jpg" alt="API 5CT & 5B Tubing Coupling and Casing Coupling" fetchpriority="high">
+        <div class="banner-mask"></div>
+        <div class="absolute inset-0 max-w-7xl mx-auto px-4 md:px-8 flex items-center">
             <div class="relative z-10 max-w-3xl">
-                <h1 class="font-bold leading-tight">
+                <h1 class="text-[1.8rem] md:text-[2.4rem] font-bold leading-tight text-white">
                     API 5CT & 5B Tubing Coupling and Casing Coupling
                 </h1>
-                <p class="mt-3 text-lg text-white/85">
+                <p class="mt-3 text-base md:text-lg text-white/85">
                     Premium Quality Oil Country Tubular Goods from Trusted Manufacturer
                 </p>
                 <div class="mt-5 flex flex-wrap gap-3">
@@ -103,65 +96,61 @@
     </div>
 </section>
 
-<div class="max-w-[1440px] mx-auto px-8">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
 
-    <!-- 产品板块 永远3列 -->
-    <section id="products" class="py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-[2.8rem] font-bold text-mainBlue">Our Products</h2>
-            <p class="mt-4 text-lg text-grayText">
-                Complete range of API 5CT&amp;5B certified couplings for oil and gas well applications
+    <section id="products" class="py-12 md:py-16">
+        <div class="text-center mb-8 md:mb-12">
+            <h2 class="text-[2rem] md:text-[2.8rem] font-bold text-mainBlue">Our Products</h2>
+            <p class="mt-4 text-base md:text-lg text-grayText">
+                Complete range of API 5CT&amp;5B certified couplings for oil & gas well service
             </p>
         </div>
-        <div class="grid grid-cols-3 gap-6">
-            <!-- Casing Coupling -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-64 bg-bgLightGray">
-                    <img src="scc.jpg" alt="Casing Coupling" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
+                <div class="h-56 md:h-64 bg-bgLightGray">
+                    <img src="scc.jpg" alt="Casing Coupling" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-[1.5rem] font-bold text-mainBlue">Casing Coupling</h3>
+                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Casing Coupling</h3>
                     <p class="mt-3 text-grayText text-base">
                         High‑strength couplings for casing strings in oil and gas wells.
                     </p>
                     <p class="mt-4 text-sm text-grayText">
-                        Size: 4‑1/2" to 20" | Grades: J55/K55/L80/N80/P110/Q125
+                        Size: 4‑1/2" ~ 20" | Grades: J55/K55/L80/N80/P110/Q125
                     </p>
                     <a href="#quote" class="mt-5 inline-block text-orangeAccent text-lg font-medium hover:underline">
                         Learn More →
                     </a>
                 </div>
             </div>
-            <!-- Tubing Coupling -->
             <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-64 bg-bgLightGray">
-                    <img src="t.jpg" alt="Tubing Coupling" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
+                <div class="h-56 md:h-64 bg-bgLightGray">
+                    <img src="t.jpg" alt="Tubing Coupling" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-[1.5rem] font-bold text-mainBlue">Tubing Coupling</h3>
+                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Tubing Coupling</h3>
                     <p class="mt-3 text-grayText text-base">
-                        Precision couplings for tubing strings meeting API 5CT standards.
+                        Precision machined couplings for tubing string assembly.
                     </p>
                     <p class="mt-4 text-sm text-grayText">
-                        Size: 1.050" to 4‑1/2" | Grades: J55/L80/N80/C90/T95/P110
+                        Size: 1.050" ~ 4‑1/2" | Grades: J55/L80/N80/C90/T95/P110
                     </p>
                     <a href="#quote" class="mt-5 inline-block text-orangeAccent text-lg font-medium hover:underline">
                         Learn More →
                     </a>
                 </div>
             </div>
-            <!-- Coupling Blank -->
             <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="h-64 bg-bgLightGray">
-                    <img src="b.jpg" alt="Coupling Blank Marking" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
+                <div class="h-56 md:h-64 bg-bgLightGray">
+                    <img src="b.jpg" alt="Coupling Blank" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-[1.5rem] font-bold text-mainBlue">Coupling Blank</h3>
+                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Coupling Blank</h3>
                     <p class="mt-3 text-grayText text-base">
-                        Plain blank, without thread, unfinished
+                        API standard coupling blanks for further threading.
                     </p>
                     <p class="mt-4 text-sm text-grayText">
-                        Customization available | All standard grades
+                        Custom sizes & steel grades available
                     </p>
                     <a href="#quote" class="mt-5 inline-block text-orangeAccent text-lg font-medium hover:underline">
                         Learn More →
@@ -171,86 +160,84 @@
         </div>
     </section>
 
-    <!-- Why Us 板块 永远3列 -->
-    <section id="whyus" class="py-16 bg-bgLightGray -mx-8 px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-[2.8rem] font-bold text-mainBlue">Why Choose Gpot International Inc</h2>
-            <p class="mt-4 text-lg text-grayText">
-                Trusted OCTG supplier serving oil &amp; gas operators across North America
+    <section id="whyus" class="py-12 md:py-16 bg-bgLightGray -mx-4 md:-mx-8 px-4 md:px-8">
+        <div class="text-center mb-8 md:mb-12">
+            <h2 class="text-[2rem] md:text-[2.8rem] font-bold text-mainBlue">Why Choose Gpot International Inc</h2>
+            <p class="mt-4 text-base md:text-lg text-grayText">
+                Reliable OCTG supplier serving North America oil & gas operators
             </p>
         </div>
-        <div class="grid grid-cols-3 gap-8 text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div class="transition-transform duration-300 hover:-translate-y-1">
                 <div class="w-20 h-20 rounded-full bg-cardGray flex items-center justify-center mx-auto mb-5">
                     <span class="text-3xl text-mainBlue">✓</span>
                 </div>
-                <h3 class="text-xl font-bold text-mainBlue">API Certified Quality</h3>
+                <h3 class="text-xl font-bold text-mainBlue">API Compliant Quality</h3>
                 <p class="mt-3 text-grayText text-base">
-                    All products strictly comply with API 5CT &amp; API 5B industry specifications.
+                    Strictly follow API 5CT & API 5B specifications, full material traceability.
                 </p>
             </div>
             <div class="transition-transform duration-300 hover:-translate-y-1">
                 <div class="w-20 h-20 rounded-full bg-cardGray flex items-center justify-center mx-auto mb-5">
                     <span class="text-3xl text-mainBlue">◆</span>
                 </div>
-                <h3 class="text-xl font-bold text-mainBlue">Full Size &amp; Grade Range</h3>
+                <h3 class="text-xl font-bold text-mainBlue">Wide Size & Grade Range</h3>
                 <p class="mt-3 text-grayText text-base">
-                    Complete selection from small tubing to large casing, grades J55 through Q125.
+                    Rich inventory covers most common casing & tubing coupling specifications.
                 </p>
             </div>
             <div class="transition-transform duration-300 hover:-translate-y-1">
                 <div class="w-20 h-20 rounded-full bg-cardGray flex items-center justify-center mx-auto mb-5">
                     <span class="text-3xl text-mainBlue">⚙</span>
                 </div>
-                <h3 class="text-xl font-bold text-mainBlue">Full Material Traceability</h3>
+                <h3 class="text-xl font-bold text-mainBlue">Fast Delivery & Documents</h3>
                 <p class="mt-3 text-grayText text-base">
-                    MTC material test certificates provided for every shipment.
+                    Quick shipment, complete export documents including MTC.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Package & Shipment 永远左右两栏 -->
-    <section id="packaging" class="py-16">
-        <div class="grid grid-cols-2 gap-8 items-center">
+    <section class="py-12 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div class="grid grid-cols-2 gap-3">
-                <img src="333.jpg" alt="Package" class="w-full h-44 object-cover rounded" loading="lazy" width="240" height="176">
-                <img src="555.jpg" alt="Package" class="w-full h-44 object-cover rounded" loading="lazy" width="240" height="176">
-                <img src="bb.jpg" alt="Package" class="w-full h-44 object-cover rounded" loading="lazy" width="240" height="176">
-                <img src="a99aff1cd4db403e9922452ef214cdf.jpg" alt="Package" class="w-full h-44 object-cover rounded" loading="lazy" width="240" height="176">
+                <img src="ship.jpg" alt="Stock & Packaging" class="w-full h-40 object-cover rounded" loading="lazy">
+                <img src="ship2.jpg" alt="Stock & Packaging" class="w-full h-40 object-cover rounded" loading="lazy">
+                <img src="ship3.jpg" alt="Stock & Packaging" class="w-full h-40 object-cover rounded" loading="lazy">
+                <img src="ship4.jpg" alt="Stock & Packaging" class="w-full h-40 object-cover rounded" loading="lazy">
             </div>
             <div>
-                <h3 class="text-lg font-bold text-mainBlue mb-3">Ample Spot Inventory & Professional Export Packaging</h3>
+                <h3 class="text-lg font-bold text-mainBlue mb-3">Ample Spot Inventory & Export‑grade Packaging</h3>
                 <p class="text-sm text-grayText mb-4">
-                    Mass ready stock of tubing & casing couplings available for fast delivery. All goods are packed strictly following OCTG export standards to prevent thread damage, rust and collision during long ocean transportation.
+                    Large ready‑to‑ship stock of casing & tubing couplings. Products are well protected for long‑distance ocean transportation.
                 </p>
                 <ul class="space-y-3">
                     <li class="flex gap-3">
                         <span class="text-mainBlue shrink-0">✓</span>
                         <div>
-                            <strong class="text-base">Rich Ready Stock</strong>
-                            <p class="text-sm text-grayText">Wide range of sizes & steel grades stored in warehouse, support small trial orders and large bulk shipments with short lead time.</p>
+                            <strong class="text-base">Ready Stock Available</strong>
+                            <p class="text-sm text-grayText">Mass inventory for quick order fulfillment.</p>
                         </div>
                     </li>
                     <li class="flex gap-3">
                         <span class="text-mainBlue shrink-0">✓</span>
                         <div>
-                            <strong class="text-base">Full Thread Protection</strong>
-                            <p class="text-sm text-grayText">Anti‑rust grease + plastic thread protectors fitted on both ends to safeguard precision threads.</p>
+                            <strong class="text-base">Thread Protection</strong>
+                            <p class="text-sm text-grayText">Thread protectors for every coupling.</p>
                         </div>
                     </li>
                     <li class="flex gap-3">
                         <span class="text-mainBlue shrink-0">✓</span>
                         <div>
-                            <strong class="text-base">Standard Cargo Bundling</strong>
-                            <p class="text-sm text-grayText">Secured steel strapping for bulk goods; wooden pallets optional for convenient container loading & forklift handling.</p>
+                            <strong class="text-base">Safe Sea‑worthy Packing</strong>
+                            <p class="text-sm text-grayText">Bundled & strapped for container loading.</p>
                         </div>
                     </li>
                     <li class="flex gap-3">
                         <span class="text-mainBlue shrink-0">✓</span>
                         <div>
-                            <strong class="text-base">Complete Export Documentation</strong>
-                            <p class="text-sm text-grayText">Full set of documents provided: Commercial Invoice, Packing List, Certificate of Origin and Material Test Certificates.</p>
+                            <strong class="text-base">Full Export Paperwork</strong>
+                            <p class="text-sm text-grayText">MTC, commercial invoice, packing list available.</p>
                         </div>
                     </li>
                 </ul>
@@ -258,116 +245,117 @@
         </div>
     </section>
 
-    <!-- Downloads -->
-  <section id="downloads" class="py-16 bg-[#F2F5F8] -mx-8 px-8">
-  <div class="max-w-6xl mx-auto">
-    <div class="bg-white rounded-xl p-10 shadow-md text-center transition-shadow duration-300 hover:shadow-lg">
-      <h2 class="text-[2.4rem] font-bold text-mainBlue mb-4">Download Specifications</h2>
-      <p class="text-grayText text-base mb-8 max-w-4xl mx-auto">
-        Download our complete product specification sheet for detailed technical information including dimensions, tolerances, and testing requirements.
-      </p>
-      <a href="Coupling Catalog.pdf" class="inline-flex items-center gap-3 bg-[#D87918] text-white px-8 py-4 rounded-lg text-lg transition-colors hover:bg-[#b86610]">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14m0 0l-7-7m7 7l7-7"></path>
-        </svg>
-        Download PDF Coupling Catalog
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Quote 表单 -->
-<section id="quote" class="py-16 bg-white">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-10">
-      <h2 class="text-[2.4rem] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
-      <p class="text-grayText text-base">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
-    </div>
-
-    <div class="bg-[#f7f8fa] rounded-xl p-8 max-w-4xl mx-auto border border-gray-200 shadow-sm">
-      <form id="quoteForm">
-      <div class="grid grid-cols-2 gap-5 mb-5">
-        <div>
-          <label for="company" class="block mb-2 font-medium text-base">Company Name</label>
-          <input id="company" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Your company name">
+    <section id="downloads" class="py-12 md:py-16 bg-[#F2F5F8] -mx-4 md:-mx-8 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-xl p-6 md:p-10 shadow-md text-center transition-shadow duration-300 hover:shadow-lg">
+                <h2 class="text-[1.8rem] md:text-[2.4rem] font-bold text-mainBlue mb-4">Download Specifications</h2>
+                <p class="text-grayText text-base mb-8 max-w-4xl mx-auto">
+                    Download our product catalog and technical data sheet for reference.
+                </p>
+                <a href="Coupling Catalog.pdf" class="inline-flex items-center gap-3 bg-orangeAccent text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-lg transition-colors hover:bg-[#b86610]">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14m0 0l-7‑7m7 7l7‑7"></path>
+                    </svg>
+                    Download PDF Catalog
+                </a>
+            </div>
         </div>
-        <div>
-          <label for="contact" class="block mb-2 font-medium text-base">Contact Person</label>
-          <input id="contact" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Your full name">
-        </div>
-      </div>
+    </section>
 
-      <div class="grid grid-cols-2 gap-5 mb-5">
-        <div>
-          <label for="email" class="block mb-2 font-medium text-base">Email Address</label>
-          <input id="email" type="email" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="business@company.com">
-        </div>
-        <div>
-          <label for="product" class="block mb-2 font-medium text-base">Product Type</label>
-          <select id="product" class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue">
-            <option>Casing Coupling</option>
-            <option>Tubing Coupling</option>
-            <option>Coupling Blank</option>
-          </select>
-        </div>
-      </div>
+    <section id="quote" class="py-12 md:py-16 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-8 md:mb-10">
+                <h2 class="text-[1.8rem] md:text-[2.4rem] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
+                <p class="text-grayText text-base">Send your requirements, we reply within 24 working hours.</p>
+            </div>
 
-      <div class="mb-5">
-        <label for="message" class="block mb-2 font-medium text-base">Requirement Details</label>
-        <textarea id="message" rows="4" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..."></textarea>
-      </div>
+            <div class="bg-[#f7f8fa] rounded-xl p-5 md:p-8 max-w-4xl mx-auto border border-gray‑200 shadow‑sm">
+                <!-- ==========表单部分，注册formspree拿到你的链接替换下面action的值========== -->
+                <form action="https://formspree.io/f/mljrrqqd" method="POST">
+                    <div class="grid grid-cols‑1 md:grid‑cols‑2 gap‑5 mb‑5">
+                        <div>
+                            <label for="company" class="block mb‑2 font‑medium text‑base">Company Name</label>
+                            <input name="company" id="company" type="text" required class="w‑full border border‑gray‑400 rounded px‑4 py‑3 bg‑white text‑base focus:border‑mainBlue focus:ring‑1 focus:ring‑mainBlue" placeholder="Your company">
+                        </div>
+                        <div>
+                            <label for="contact" class="block mb‑2 font‑medium text‑base">Contact Person</label>
+                            <input name="contact" id="contact" type="text" required class="w‑full border border‑gray‑400 rounded px‑4 py‑3 bg‑white text‑base focus:border‑mainBlue focus:ring‑1 focus:ring‑mainBlue" placeholder="Your name">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols‑1 md:grid‑cols‑2 gap‑5 mb‑5">
+                        <div>
+                            <label for="email" class="block mb‑2 font‑medium text‑base">Email Address</label>
+                            <input name="email" id="email" type="email" required class="w‑full border border‑gray‑400 rounded px‑4 py‑3 bg‑white text‑base focus:border‑mainBlue focus:ring‑1 focus:ring‑mainBlue" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="product" class="block mb‑2 font‑medium text‑base">Product Type</label>
+                            <select name="product" id="product" class="w‑full border border‑gray‑400 rounded px‑4 py‑3 bg‑white text‑base focus:border‑mainBlue focus:ring‑1 focus:ring‑mainBlue">
+                                <option>Casing Coupling</option>
+                                <option>Tubing Coupling</option>
+                                <option>Coupling Blank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb‑5">
+                        <label for="message" class="block mb‑2 font‑medium text‑base">Requirement Details</label>
+                        <textarea name="message" id="message" rows="4" required class="w‑full border border‑gray‑400 rounded px‑4 py‑3 bg‑white text‑base focus:border‑mainBlue focus:ring‑1 focus:ring‑mainBlue" placeholder="Tell us size, grade, quantity and other requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="w‑full bg‑blue‑600 text‑white py‑3.5 rounded‑lg font‑medium text‑lg transition‑colors hover:bg‑blue‑700 active:bg‑blue‑800">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-      <button type="submit" class="w-full bg-blue-600 text-white py-3.5 rounded-lg font-medium text-lg transition-colors hover:bg-blue-700 active:bg-blue-800">Submit Inquiry</button>
-      </form>
+</div>
+
+<footer class="bg-mainBlue text-white py‑10 md:py‑12">
+    <div class="max‑w‑7xl mx‑auto px‑4 md:px‑8">
+        <div class="grid grid‑cols‑1 md:grid‑cols‑3 gap‑8 mb‑8">
+            <div>
+                <div class="flex items‑center gap‑3 mb‑3">
+                    <img src="logo.jpg" alt="Gpot International Inc Logo" class="h‑8 w‑auto">
+                    <h3 class="text‑lg font‑bold">Gpot International Inc</h3>
+                </div>
+                <p class="text‑white/70 text‑sm leading‑relaxed">
+                    Supplier of API 5CT & 5B casing & tubing couplings for oil‑gas industry.
+                </p>
+            </div>
+            <div>
+                <h3 class="text‑lg font‑bold mb‑3">Quick Links</h3>
+                <ul class="space‑y‑2 text‑white/70 text‑sm">
+                    <li><a href="#products" class="hover:text‑white">Products</a></li>
+                    <li><a href="#whyus" class="hover:text‑white">Why Us</a></li>
+                    <li><a href="#downloads" class="hover:text‑white">Downloads</a></li>
+                    <li><a href="#quote" class="hover:text‑white">Quote</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text‑lg font‑bold mb‑3">Contact Info</h3>
+                <ul class="space‑y‑2 text‑white/70 text‑sm">
+                    <li>30 N GOULD ST STE 41398 SHERIDAN，WY 82801</li>
+                    <li>📧 <a href="mailto:wangxin8611@126.com" class="hover:text‑white">wangxin8611@126.com</a></li>
+                    <li>📱 <a href="tel:+13074359435" class="hover:text‑white">+1 3074359435</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border‑t border‑white/20 pt‑6 text‑center text‑white/60 text‑sm">
+            © 2026 Gpot International Inc. All rights reserved.
+        </div>
     </div>
-  </div>
-</section>
-
-<!-- 页脚 -->
-<footer class="bg-mainBlue text-white py-12 -mx-8 px-8">
-  <div class="max-w-[1440px] mx-auto">
-    <div class="grid grid-cols-3 gap-8 mb-8">
-      <div>
-        <div class="flex items-center gap-3 mb-3">
-          <img src="logo.jpg" alt="Gpot International Inc" class="h-8 w-auto" width="32" height="32">
-          <h3 class="text-lg font-bold">Gpot International Inc</h3>
-        </div>
-        <p class="text-white/70 text-sm leading-relaxed">
-          Professional API 5CT&5B oil country tubular goods coupling manufacturer and international supplier.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-bold mb-3">Quick Links</h3>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="#products" class="hover:text-white transition-colors">Products</a></li>
-          <li><a href="#whyus" class="hover:text-white transition-colors">Why Us</a></li>
-          <li><a href="#downloads" class="hover:text-white transition-colors">Downloads</a></li>
-          <li><a href="#quote" class="hover:text-white transition-colors">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-bold mb-3">Contact Information</h3>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li>🌏 30 N GOULD ST #41398 SHERIDAN, WY 82801 USA</li>
-          <li>📧 <a href="mailto:sales@gpotinc.com" class="hover:text-white">sales@gpotinc.com</a></li>
-          <li>📱 <a href="tel:+13074359435" class="hover:text-white">+1 307 435 9435</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="border-t border-white/20 pt-6 text-center text-white/60 text-sm">
-      © 2026 Gpot International Inc. All rights reserved. | API 5CT &amp; 5B OCTG Coupling Manufacturer
-    </div>
-  </div>
 </footer>
 
 <script>
-// 表单提交简单阻止默认
-document.getElementById("quoteForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    alert("Form submit simulated");
+//汉堡菜单逻辑
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+});
+//点击链接关闭移动端菜单
+mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+    })
 })
 </script>
 
