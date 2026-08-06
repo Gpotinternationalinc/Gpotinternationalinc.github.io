@@ -5,55 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gpot International Inc | API 5CT Tubing & Casing Coupling</title>
 
+    <!-- 引入纯CSS版Tailwind（不依赖JS，禁用JS也能正常显示样式） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css">
+
+    <!-- 基础重置 + 自定义颜色兜底样式 -->
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Inter, Arial, sans-serif; color: #475569; line-height: 1.6; background: #fff; }
         html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; color: #475569; line-height: 1.6; background: #fff; }
         input, select, textarea { outline: none; }
         img { max-width: 100%; display: block; }
+
+        /* 自定义颜色类 与原设计完全对应 */
+        .text-mainBlue { color: #093066; }
+        .bg-mainBlue { background-color: #093066; }
+        .border-mainBlue { border-color: #093066; }
+        .text-primaryBlue { color: #0052cc; }
+        .text-orangeAccent { color: #d47814; }
+        .bg-orangeAccent { background-color: #d47814; }
+        .text-grayText { color: #475569; }
+        .bg-bgLightGray { background-color: #F2F5F8; }
+        .bg-cardGray { background-color: #E9EDF2; }
+
+        /* 交互状态样式 */
+        .hover\:text-primaryBlue:hover { color: #0052cc; }
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-white\/10:hover { background-color: rgba(255,255,255,0.1); }
+        .hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+        .hover\:text-white:hover { color: #fff; }
+        .focus\:border-mainBlue:focus { border-color: #093066; }
+        .focus\:ring-1:focus { --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color); }
+        .focus\:ring-mainBlue:focus { --tw-ring-color: #093066; }
+
+        /* 移动端菜单默认隐藏 */
+        .hidden { display: none; }
     </style>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        mainBlue: '#093066',
-                        primaryBlue: '#0052cc',
-                        orangeAccent: '#d47814',
-                        grayText: '#475569',
-                        bgLightGray: '#F2F5F8',
-                        cardGray: '#E9EDF2'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Arial', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-white font-sans text-grayText">
+<body class="bg-white text-grayText">
 
+<!-- 顶部导航栏 -->
 <header class="shadow-sm sticky top-0 bg-white z-50">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
         <a href="#" class="flex items-center gap-2">
             <img src="logo.jpg" alt="Gpot International Inc" class="h-8 md:h-10 w-auto" width="40" height="40">
-            <span class="text-[1.2rem] md:text-[1.6rem] font-bold text-mainBlue">Gpot International Inc</span>
+            <span class="text-lg md:text-2xl font-bold text-mainBlue">Gpot International Inc</span>
         </a>
 
+        <!-- 桌面端导航 -->
         <nav class="hidden md:flex gap-6">
-            <a href="#products" class="text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Products</a>
-            <a href="#whyus" class="text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Why Us</a>
-            <a href="#packaging" class="text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Packaging</a>
-            <a href="#downloads" class="text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Downloads</a>
-            <a href="#quote" class="text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Quote</a>
+            <a href="#products" class="text-base md:text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Products</a>
+            <a href="#whyus" class="text-base md:text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Why Us</a>
+            <a href="#packaging" class="text-base md:text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Packaging</a>
+            <a href="#downloads" class="text-base md:text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Downloads</a>
+            <a href="#quote" class="text-base md:text-lg font-medium text-mainBlue hover:text-primaryBlue transition-colors">Quote</a>
         </nav>
 
+        <!-- 移动端汉堡按钮 -->
         <button id="menuBtn" class="md:hidden text-mainBlue text-2xl px-2" aria-label="Toggle menu">☰</button>
     </div>
 
+    <!-- 移动端下拉菜单 -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
         <nav class="flex flex-col px-4 py-3 gap-3">
             <a href="#products" class="py-1 text-base font-medium text-mainBlue">Products</a>
@@ -65,8 +76,9 @@
     </div>
 </header>
 
+<!-- Banner 区域 -->
 <section class="relative text-white overflow-hidden">
-    <div class="w-full h-[260px] md:h-[340px] relative">
+    <div class="w-full h-64 md:h-96 relative">
         <img 
             src="m.jpg" 
             alt="API 5CT & 5B Tubing Coupling and Casing Coupling"
@@ -74,9 +86,9 @@
             width="1440" height="340"
         >
         <div class="absolute inset-0 bg-black/40"></div>
-        <div class="absolute inset-0 max-w-[1440px] mx-auto px-4 md:px-8 flex items-center">
+        <div class="absolute inset-0 max-w-7xl mx-auto px-4 md:px-8 flex items-center">
             <div class="relative z-10 max-w-3xl">
-                <h1 class="text-[1.8rem] md:text-[2.4rem] font-bold leading-tight">
+                <h1 class="text-2xl md:text-4xl font-bold leading-tight">
                     API 5CT & 5B Tubing Coupling and Casing Coupling
                 </h1>
                 <p class="mt-3 text-sm md:text-lg text-white/85">
@@ -95,22 +107,24 @@
     </div>
 </section>
 
-<div class="max-w-[1440px] mx-auto px-4 md:px-8">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
 
+    <!-- 产品板块 -->
     <section id="products" class="py-10 md:py-16">
         <div class="text-center mb-8 md:mb-12">
-            <h2 class="text-[1.8rem] md:text-[2.4rem] font-bold text-mainBlue">Our Products</h2>
+            <h2 class="text-2xl md:text-4xl font-bold text-mainBlue">Our Products</h2>
             <p class="mt-3 md:mt-4 text-base md:text-lg text-grayText">
                 Complete range of API 5CT & 5B certified couplings for oil and gas well applications
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            <!-- Casing Coupling -->
             <div class="bg-white rounded overflow-hidden shadow">
                 <div class="h-44 md:h-64 bg-bgLightGray">
                     <img src="scc.jpg" alt="Casing Coupling" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
                 </div>
                 <div class="p-5 md:p-6">
-                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Casing Coupling</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-mainBlue">Casing Coupling</h3>
                     <p class="mt-3 text-grayText text-sm md:text-base">
                         High-strength couplings for casing strings in oil and gas wells.
                     </p>
@@ -122,13 +136,13 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Tubing Coupling -->
             <div class="bg-white rounded overflow-hidden shadow">
                 <div class="h-44 md:h-64 bg-bgLightGray">
                     <img src="t.jpg" alt="Tubing Coupling" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
                 </div>
                 <div class="p-5 md:p-6">
-                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Tubing Coupling</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-mainBlue">Tubing Coupling</h3>
                     <p class="mt-3 text-grayText text-sm md:text-base">
                         Precision couplings for tubing strings meeting API 5CT standards.
                     </p>
@@ -140,13 +154,13 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Coupling Blank -->
             <div class="bg-white rounded overflow-hidden shadow">
                 <div class="h-44 md:h-64 bg-bgLightGray">
                     <img src="b.jpg" alt="Coupling Blank" class="w-full h-full object-cover" loading="lazy" width="480" height="256">
                 </div>
                 <div class="p-5 md:p-6">
-                    <h3 class="text-[1.3rem] md:text-[1.5rem] font-bold text-mainBlue">Coupling Blank</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-mainBlue">Coupling Blank</h3>
                     <p class="mt-3 text-grayText text-sm md:text-base">
                         Plain blank, without thread, unfinished
                     </p>
@@ -161,10 +175,11 @@
         </div>
     </section>
 
+    <!-- Why Us 板块 -->
     <section id="whyus" class="py-10 md:py-16 bg-bgLightGray -mx-4 md:-mx-8 px-4 md:px-8">
-        <div class="max-w-[1440px] mx-auto">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-8 md:mb-12">
-                <h2 class="text-[1.8rem] md:text-[2.4rem] font-bold text-mainBlue">Why Choose Gpot International Inc</h2>
+                <h2 class="text-2xl md:text-4xl font-bold text-mainBlue">Why Choose Gpot International Inc</h2>
                 <p class="mt-3 md:mt-4 text-base md:text-lg text-grayText">
                     Trusted OCTG supplier serving oil & gas operators across North America
                 </p>
@@ -201,14 +216,17 @@
         </div>
     </section>
 
+    <!-- Package & Shipment 板块 -->
     <section id="packaging" class="py-10 md:py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <!-- 左侧图片 -->
             <div class="grid grid-cols-2 gap-3 order-2 md:order-1">
                 <img src="333.jpg" alt="Package" class="w-full h-32 md:h-44 object-cover rounded" loading="lazy" width="240" height="176">
                 <img src="555.jpg" alt="Package" class="w-full h-32 md:h-44 object-cover rounded" loading="lazy" width="240" height="176">
                 <img src="bb.jpg" alt="Package" class="w-full h-32 md:h-44 object-cover rounded" loading="lazy" width="240" height="176">
                 <img src="a99aff1cd4db403e9922452ef214cdf.jpg" alt="Package" class="w-full h-32 md:h-44 object-cover rounded" loading="lazy" width="240" height="176">
             </div>
+            <!-- 右侧文案 -->
             <div class="order-1 md:order-2">
                 <h3 class="text-base md:text-lg font-bold text-mainBlue mb-3">Ample Spot Inventory & Professional Export Packaging</h3>
                 <p class="text-sm text-grayText mb-4">
@@ -248,10 +266,11 @@
         </div>
     </section>
 
+    <!-- Downloads 板块 -->
     <section id="downloads" class="py-10 md:py-16 bg-bgLightGray -mx-4 md:-mx-8 px-4 md:px-8">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-xl p-6 md:p-10 shadow-md text-center">
-                <h2 class="text-[1.6rem] md:text-[2.2rem] font-bold text-mainBlue mb-3 md:mb-4">Download Specifications</h2>
+            <div class="bg-white rounded-xl p-6 md:p-10 shadow-md text-center transition-shadow duration-300 hover:shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-mainBlue mb-3 md:mb-4">Download Specifications</h2>
                 <p class="text-grayText text-sm md:text-base mb-6 md:mb-8">
                     Download our complete product specification sheet for detailed technical information including dimensions, tolerances, and testing requirements.
                 </p>
@@ -265,15 +284,17 @@
         </div>
     </section>
 
+    <!-- Quote 询价表单 -->
     <section id="quote" class="py-10 md:py-16 bg-white">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-8 md:mb-10">
-                <h2 class="text-[1.6rem] md:text-[2.2rem] font-bold text-mainBlue mb-3">Request A Free Quote</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-mainBlue mb-3">Request A Free Quote</h2>
                 <p class="text-grayText text-sm md:text-base">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
             </div>
 
             <div class="bg-[#f7f8fa] rounded-xl p-6 md:p-8 max-w-4xl mx-auto border border-gray-200 shadow-sm">
                 <form id="quoteForm" action="https://formspree.io/f/mljrrqqd" method="POST">
+                    <!-- 防垃圾提交蜜罐 -->
                     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="New Quote Inquiry from Website">
 
@@ -318,10 +339,11 @@
                     </div>
 
                     <button type="submit" id="submitBtn" 
-                        class="w-full bg-blue-600 text-white py-3 md:py-3.5 rounded-lg font-medium text-base md:text-lg transition-colors hover:bg-blue-700 active:bg-blue-800">
+                        class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium text-base md:text-lg transition-colors hover:bg-blue-700 active:bg-blue-800">
                         Submit Inquiry
                     </button>
 
+                    <!-- 提交成功提示 -->
                     <div id="successMsg" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded text-center text-sm md:text-base">
                         Thank you! Your inquiry has been submitted successfully. We will contact you shortly.
                     </div>
@@ -332,9 +354,11 @@
 
 </div>
 
+<!-- 页脚 -->
 <footer class="bg-mainBlue text-white py-10 md:py-12 -mx-4 md:-mx-8 px-4 md:px-8">
-    <div class="max-w-[1440px] mx-auto">
+    <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+            <!-- 公司介绍 -->
             <div>
                 <div class="flex items-center gap-3 mb-3">
                     <img src="logo.jpg" alt="Gpot International Inc" class="h-7 md:h-8 w-auto" width="32" height="32">
@@ -345,6 +369,7 @@
                 </p>
             </div>
 
+            <!-- 快速导航 -->
             <div>
                 <h3 class="text-base md:text-lg font-bold mb-3">Quick Links</h3>
                 <ul class="space-y-2 text-white/70 text-xs md:text-sm">
@@ -355,6 +380,7 @@
                 </ul>
             </div>
 
+            <!-- 联系方式 -->
             <div>
                 <h3 class="text-base md:text-lg font-bold mb-3">Contact Information</h3>
                 <ul class="space-y-2 text-white/70 text-xs md:text-sm">
@@ -372,18 +398,21 @@
 </footer>
 
 <script>
+    // 移动端菜单切换
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
+    // 点击移动端菜单链接后自动收起
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
         });
     });
 
+    // 表单异步提交
     const form = document.getElementById('quoteForm');
     const submitBtn = document.getElementById('submitBtn');
     const successMsg = document.getElementById('successMsg');
@@ -398,7 +427,9 @@
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
-                headers: { 'Accept': 'application/json' }
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
             if (response.ok) {
