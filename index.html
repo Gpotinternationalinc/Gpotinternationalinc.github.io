@@ -23,6 +23,10 @@
         }
         .banner-wrap img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
         .banner-mask { position: absolute; inset: 0; background-color: rgba(0,0,0,0.42); }
+        /* 修复Safari强制禁止导航换行 */
+        .nav-no-wrap {
+            white-space: nowrap !important;
+        }
     </style>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,21 +48,19 @@
 </head>
 <body class="bg-white font-sans text-grayText">
 
+<!-- 【已修复导航：删除clamp，全浏览器兼容，永远同一行】 -->
 <header class="shadow-sm sticky top-0 bg-white z-50">
-  <div class="max-w-7xl mx-auto px-3 py-2">
-    <div class="flex items-center justify-between gap-2 whitespace-nowrap">
-      <!-- Logo +公司名称，空间不足自动缩小 -->
-      <a href="#" class="flex items-center gap-2 flex-shrink-1 min-w-0">
-        <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-8 md:h-11 w-auto object-contain">
-        <span class="text-[clamp(0.9rem,2vw,1.4rem)] font-bold text-mainBlue whitespace-nowrap">Gpot International Inc</span>
+  <div class="max-w-7xl mx-auto px-2 py-2">
+    <div class="flex items-center justify-between gap-1 nav-no-wrap">
+      <a href="#" class="flex items-center gap-2 flex-shrink-0">
+        <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-9 md:h-11 w-auto object-contain max-h-[44px]">
+        <span class="text-sm md:text-base lg:text-lg font-bold text-mainBlue">Gpot International Inc</span>
       </a>
-
-      <!-- 导航：强制同一行，不换行，屏幕变小整体收缩字体 -->
-      <nav class="flex gap-x-[clamp(0.7rem,2vw,1.8rem)] flex-shrink-0">
-        <a href="#products" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Products</a>
-        <a href="#whyus" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Why Us</a>
-        <a href="#downloads" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Downloads</a>
-        <a href="#quote" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Quote</a>
+      <nav class="flex gap-x-2 md:gap-x-5 flex-shrink-0">
+        <a href="#products" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Products</a>
+        <a href="#whyus" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Why Us</a>
+        <a href="#downloads" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Downloads</a>
+        <a href="#quote" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Quote</a>
       </nav>
     </div>
   </div>
@@ -298,7 +300,7 @@
   </div>
 </section>
 
-<!-- ========== 页脚Footer 完整代码 ========== -->
+<!-- ========== 页脚Footer（修复锚点ID错误） ========== -->
 <footer class="bg-[#0f3460] text-white py-12">
   <div class="max-w-6xl mx-auto px-4 md:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -312,9 +314,9 @@
       <div>
         <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2 text-gray‑200">
-          <li><a href="#product" class="hover:text-white">Products</a></li>
-          <li><a href="#stock" class="hover:text-white">Why Us</a></li>
-          <li><a href="#download" class="hover:text-white">Downloads</a></li>
+          <li><a href="#products" class="hover:text-white">Products</a></li>
+          <li><a href="#whyus" class="hover:text-white">Why Us</a></li>
+          <li><a href="#downloads" class="hover:text-white">Downloads</a></li>
           <li><a href="#quote" class="hover:text-white">Quote</a></li>
         </ul>
       </div>
@@ -335,10 +337,7 @@
 </footer>
 
 <script>
-document.getElementById("quoteForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    alert("Form submit simulated");
-})
+// 原代码找不到quoteForm，删掉错误id监听，不影响formspree提交
 </script>
 
 </body>
