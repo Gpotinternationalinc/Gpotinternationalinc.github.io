@@ -229,84 +229,104 @@
 </section>
 
 <!-- Downloads -->
-<section id="downloads" class="py‑16">
-  <div class="max‑w‑5xl text‑center">
-    <h2 class="clamp‑h2 mb‑4">Downloads</h2>
-    <p class="text‑grayText mb‑8">Download our product catalog and specification documents</p>
-    <div class="flex‑wrap justify‑center gap‑4">
-      <a href="catalog.pdf" download class="px‑6py‑3 bg‑blue hover‑op90">Product Catalog PDF</a>
-      <a href="spec.pdf" download class="px‑6py‑3 bg‑orange hover‑op90">Technical Spec Sheet</a>
+<section id="downloads" class="py-12 md:py-16 bg-f2f5f8 -mx-4 md:-mx-8 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="bg-white rounded-xl p-6 md:p-10 shadow-md text-center transition-shadow duration-300 hover-shadow-lg">
+      <h2 class="text-1-8rem md:text-2-4rem font-bold text-mainBlue mb-4">Download Specifications</h2>
+      <p class="text-grayText text-base mb-8 max-w-4xl mx-auto">
+        Download our complete product specification sheet for detailed technical information including dimensions, tolerances, and testing requirements.
+      </p>
+      <a href="Coupling Catalog.pdf" class="inline-flex items-center gap-3 bg-orange-accent text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-lg transition-colors hover-bg-orange-accent-dark">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14m0 0l-7-7m7 7l7-7"></path>
+        </svg>
+        Download PDF Coupling Catalog
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Quote 加宽表单 -->
-<section id="quote" class="py‑16 bg‑f8fafc">
-  <div class="max‑w‑5xl">
-    <div class="text‑center mb‑10">
-      <h2 class="clamp‑h2 text‑mainBlue mb‑3">Request A Free Quote</h2>
-      <p class="text‑grayText">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
+<!-- Quote -->
+<section id="quote" class="py-12 md:py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-8 md:mb-10">
+      <h2 class="text-1-8rem md:text-2-4rem font-bold text-mainBlue mb-3">Request A Free Quote</h2>
+      <p class="text-grayText text-base">Send your product requirements, we will reply with detailed quotation within 24 hours</p>
     </div>
-    <div class="bg‑white‑xl max‑w‑3xl">
-      <div class="grid‑md2 mb‑5">
-        <div>
-          <label>Your Name</label>
-          <input type="text">
+
+    <div class="bg-f7f8fa rounded-xl p-5 md:p-8 max-w-4xl mx-auto border border-gray-200 shadow-sm">
+      <form id="quoteForm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="company" class="block mb-2 font-medium text-base">Company Name</label>
+            <input id="company" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Your company name">
+          </div>
+          <div>
+            <label for="contact" class="block mb-2 font-medium text-base">Contact Person</label>
+            <input id="contact" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Your full name">
+          </div>
         </div>
-        <div>
-          <label>Email Address</label>
-          <input type="email">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="email" class="block mb-2 font-medium text-base">Email Address</label>
+            <input id="email" type="email" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="business@company.com">
+          </div>
+          <div>
+            <label for="product" class="block mb-2 font-medium text-base">Product Type</label>
+            <select id="product" class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base">
+              <option>Casing Coupling</option>
+              <option>Tubing Coupling</option>
+              <option>Coupling Blank</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="mb‑5">
-        <label>Company</label>
-        <input type="text">
-      </div>
-      <div class="mb‑5">
-        <label>Requirements</label>
-        <textarea rows="5"></textarea>
-      </div>
-      <div class="text‑center">
-        <button>Submit Inquiry</button>
-      </div>
+        <div class="mb-5">
+          <label for="message" class="block mb-2 font-medium text-base">Requirement Details</label>
+          <textarea id="message" rows="4" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Please specify size, steel grade, thread type, quantity, destination port and other requirements..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3-5 rounded-lg font-medium text-lg transition-colors hover-bg-blue-700 active-bg-blue-800">Submit Inquiry</button>
+      </form>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer>
-  <div class="max‑w‑6xl">
-    <div class="footer‑grid">
+<footer class="bg-mainBlue text-white py-10 md:py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div>
-        <div class="flex items‑center gap‑3 mb‑4">
-          <img src="logo.jpg" alt="Gpot International Inc" class="h‑14">
-          <h3 class="text‑xl font‑bold">Gpot International Inc</h3>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="logo.jpg" alt="Gpot International Inc" class="h-8 w-auto" width="120" height="40">
+          <h3 class="text-lg font-bold">Gpot International Inc</h3>
         </div>
-        <p class="text‑sm">Supplier of API 5CT & 5B casing & tubing couplings for oil‑gas industry.</p>
+        <p class="text-white-70 text-sm leading-relaxed">
+          Professional API 5CT&5B oil country tubular goods coupling manufacturer and international supplier.
+        </p>
       </div>
       <div>
-        <h4 class="text‑lg font‑semibold mb‑4">Quick Links</h4>
-        <ul>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#whyus">Why Us</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#quote">Quote</a></li>
+        <h3 class="text-lg font-bold mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-white-70 text-sm">
+          <li><a href="#products" class="hover:text-white">Products</a></li>
+          <li><a href="#whyus" class="hover:text-white">Why Us</a></li>
+          <li><a href="#downloads" class="hover:text-white">Downloads</a></li>
+          <li><a href="#quote" class="hover:text-white">Contact Us</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text‑lg font‑bold mb‑3">Contact Information</h3>
-        <ul class="text‑sm">
+        <h3 class="text-lg font-bold mb-3">Contact Information</h3>
+        <ul class="space-y-2 text-white-70 text-sm">
           <li>🌏 30 N GOULD ST #41398 SHERIDAN, WY 82801 USA</li>
-          <li>📧 <a href="mailto:sales@gpotinc.com">sales@gpotinc.com</a></li>
-          <li>📱 <a href="tel:+13074359435">+1 307 435 9435</a></li>
+          <li>📧 <a href="mailto:sales@gpotinc.com" class="hover:text-white">sales@gpotinc.com</a></li>
+          <li>📱 <a href="tel:+13074359435" class="hover:text-white">+1 307 435 9435</a></li>
         </ul>
       </div>
     </div>
-    <div class="border‑t‑white20">
- © 2026 Gpot International Inc. All rights reserved. | API 5CT & 5B OCTG Coupling Manufacturer
- </div>
+    <div class="border-t border-white-20 pt-6 text-center text-white-60 text-sm">
+      © 2026 Gpot International Inc. All rights reserved. | API 5CT &amp; 5B OCTG Coupling Manufacturer
+    </div>
   </div>
 </footer>
 
 </body>
 </html>
+</footer>
