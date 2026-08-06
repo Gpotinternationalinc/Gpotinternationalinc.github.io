@@ -4,22 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gpot International Inc - Professional API 5CT & 5B certified tubing and casing coupling manufacturer. Premium OCTG products with full size & grade range, fast delivery and complete export documentation.">
     <title>Gpot International Inc | API 5CT Tubing & Casing Coupling</title>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.6; background: #ffffff; -webkit-font-smoothing: antialiased; }
-header { background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 50; }
+body { font-family: 'Inter', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.6; background: #ffffff; }
+header { background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 99; }
 a { text-decoration: none; }
 html { scroll-behavior: smooth; }
 input, select, textarea { outline: none; font-family: inherit; }
 img { max-width: 100%; display: block; }
+
 .banner-wrap { position: relative; color: #fff; overflow: hidden; height: 340px; }
 @media (max-width:768px){ .banner-wrap{height:240px;} }
 .banner-wrap img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-.banner-mask { position: absolute; inset: 0; background-color: rgba(0,0,0,0.42); }
+.banner-mask { position: absolute; inset: 0; background-color: rgba(0,0,0,0.42); z-index:2; }
+.banner-content{position:relative;z-index:10;}
 
-/* === Tailwind 自定义主题颜色，和你原来tailwind.config完全一样 === */
 :root{
   --color-mainBlue:#093066;
   --color-orangeAccent:#d47814;
@@ -33,7 +32,6 @@ img { max-width: 100%; display: block; }
 .bg-bgLightGray{background-color:var(--color-bgLightGray)!important;}
 .bg-cardGray{background-color:var(--color-cardGray)!important;}
 
-/* 下面是你页面全部用到的tailwind工具类，全部补齐，不改动任何布局数值 */
 .max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto;}
 .max-w-6xl{max-width:72rem;margin-left:auto;margin-right:auto;}
 .max-w-5xl{max-width:64rem;margin-left:auto;margin-right:auto;}
@@ -54,7 +52,6 @@ img { max-width: 100%; display: block; }
 .mb-4{margin-bottom:1rem;}
 .mb-5{margin-bottom:1.25rem;}
 .mb-8{margin-bottom:2rem;}
-.mb-10{margin-bottom:2.5rem;}
 .mb-12{margin-bottom:3rem;}
 .mt-3{margin-top:0.75rem;}
 .mt-4{margin-top:1rem;}
@@ -64,7 +61,7 @@ img { max-width: 100%; display: block; }
 .gap-3{gap:0.75rem;}
 .gap-6{gap:1.5rem;}
 .gap-8{gap:2rem;}
-.gap-x-\\[clamp\\(0\\.7rem\\,2vw\\,1\\.8rem\\)\\]{gap:clamp(0.7rem,2vw,1.8rem);}
+.nav-gap{gap:1.4rem;}
 
 .grid{display:grid;}
 .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
@@ -79,13 +76,11 @@ img { max-width: 100%; display: block; }
 .flex-shrink-1{flex-shrink:1;}
 .min-w-0{min-width:0;}
 .whitespace-nowrap{white-space:nowrap;}
-.shrink-0{flex-shrink:0;}
 
 .text-center{text-align:center;}
 .font-bold{font-weight:700;}
 .font-semibold{font-weight:600;}
 .font-medium{font-weight:500;}
-
 .leading-tight{line-height:1.2;}
 
 .rounded{border-radius:0.375rem;}
@@ -132,8 +127,6 @@ img { max-width: 100%; display: block; }
 
 .text-white{color:#ffffff;}
 .text-white\/85{color:rgba(255,255,255,0.85);}
-.text-white\/70{color:rgba(255,255,255,0.7);}
-.text-white\/60{color:rgba(255,255,255,0.6);}
 .text-gray‑200{color:#e5e7eb;}
 .text-gray-700{color:#374151;}
 
@@ -164,10 +157,8 @@ input:focus,select:focus,textarea:focus{
   border-color:var(--color-mainBlue);
   box-shadow:0 0 0 1px var(--color-mainBlue);
 }
-
 button{border:none;cursor:pointer;}
 
-/* 响应式 768px md */
 @media(min-width:768px){
   .md\:h-11{height:2.75rem;}
   .md\:h-64{height:16rem;}
@@ -181,30 +172,30 @@ button{border:none;cursor:pointer;}
     </style>
 </head>
 <body class="bg-white font-sans text-grayText">
-<header class="shadow-sm sticky top-0 bg-white z-50">
+<header class="shadow-sm sticky top-0 bg-white z-99">
   <div class="max-w-7xl mx-auto px-3 py-2">
     <div class="flex items-center justify-between gap-2 whitespace-nowrap">
-      <!-- Logo +公司名称，空间不足自动缩小 -->
       <a href="#" class="flex items-center gap-2 flex-shrink-1 min-w-0">
         <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-8 md:h-11 w-auto object-contain">
-        <span class="text-[clamp(0.9rem,2vw,1.4rem)] font-bold text-mainBlue whitespace-nowrap">Gpot International Inc</span>
+        <span class="font-bold text-mainBlue whitespace-nowrap">Gpot International Inc</span>
       </a>
-      <nav class="flex gap-x-[clamp(0.7rem,2vw,1.8rem)] flex-shrink-0">
-        <a href="#products" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Products</a>
-        <a href="#whyus" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Why Us</a>
-        <a href="#downloads" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Downloads</a>
-        <a href="#quote" class="text-[clamp(0.75rem,1.6vw,1rem)] text-gray-700 hover:text-mainBlue">Quote</a>
+      <!-- 修复导航间距，不再用失效clamp gap -->
+      <nav class="flex nav-gap flex-shrink-0">
+        <a href="#products" class="text-gray-700 hover:text-mainBlue">Products</a>
+        <a href="#whyus" class="text-gray-700 hover:text-mainBlue">Why Us</a>
+        <a href="#downloads" class="text-gray-700 hover:text-mainBlue">Downloads</a>
+        <a href="#quote" class="text-gray-700 hover:text-mainBlue">Quote</a>
       </nav>
     </div>
   </div>
 </header>
 
 <section class="banner-wrap">
-  <div class="w-full h-full relative">
-    <img src="m.jpg" alt="API 5CT & 5B Tubing Coupling and Casing Coupling" fetchpriority="high">
-    <div class="banner-mask"></div>
-    <div class="absolute inset-0 max-w-7xl mx-auto px-4 md:px-8 flex items-center">
-      <div class="relative z-10 max-w-3xl">
+  <img src="m.jpg" alt="API 5CT & 5B Tubing Coupling and Casing Coupling" fetchpriority="high">
+  <div class="banner-mask"></div>
+  <!-- 修复：banner内容提高z-index，文字不会被图片盖住 -->
+  <div class="absolute inset-0 max-w-7xl mx-auto px-4 md:px-8 flex items-center banner-content">
+      <div class="max-w-3xl">
         <h1 class="text-[1.8rem] md:text-[2.4rem] font-bold leading-tight text-white">
  API 5CT & 5B Tubing Coupling and Casing Coupling
  </h1>
@@ -221,7 +212,6 @@ button{border:none;cursor:pointer;}
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -233,6 +223,7 @@ button{border:none;cursor:pointer;}
  </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 产品卡片1 -->
       <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         <div class="h-56 md:h-64 bg-bgLightGray">
           <img src="scc.jpg" alt="Casing Coupling" class="w-full h-full object-cover" loading="lazy">
@@ -246,6 +237,7 @@ button{border:none;cursor:pointer;}
           <a href="#quote" class="mt-5 inline-block text-orangeAccent text-lg font-medium hover:underline"> Learn More → </a>
         </div>
       </div>
+      <!-- 产品卡片2（修复白色卡片bug） -->
       <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         <div class="h-56 md:h-64 bg-bgLightGray">
           <img src="t.jpg" alt="Tubing Coupling" class="w-full h-full object-cover" loading="lazy">
@@ -259,6 +251,7 @@ button{border:none;cursor:pointer;}
           <a href="#quote" class="mt-5 inline-block text-orangeAccent text-lg font-medium hover:underline"> Learn More → </a>
         </div>
       </div>
+      <!-- 产品卡片3 -->
       <div class="bg-white rounded overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         <div class="h-56 md:h-64 bg-bgLightGray">
           <img src="b.jpg" alt="Coupling Blank" class="w-full h-full object-cover" loading="lazy">
@@ -388,21 +381,21 @@ button{border:none;cursor:pointer;}
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
             <div>
               <label class="block mb-2 font-medium text-base">Company Name</label>
-              <input name="company" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Your company">
+              <input name="company" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Your company">
             </div>
             <div>
               <label class="block mb-2 font-medium text-base">Contact Person</label>
-              <input name="contact" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Your name">
+              <input name="contact" type="text" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Your name">
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
             <div>
               <label class="block mb-2 font-medium text-base">Email Address</label>
-              <input name="email" type="email" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="your@email.com">
+              <input name="email" type="email" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="your@email.com">
             </div>
             <div>
               <label class="block mb-2 font-medium text-base">Product Type</label>
-              <select name="product" class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue">
+              <select name="product" class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base">
                 <option>Casing Coupling</option>
                 <option>Tubing Coupling</option>
                 <option>Coupling Blank</option>
@@ -411,7 +404,7 @@ button{border:none;cursor:pointer;}
           </div>
           <div class="mb-5">
             <label class="block mb-2 font-medium text-base">Requirement Details</label>
-            <textarea name="message" rows="4" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base focus:border-mainBlue focus:ring-1 focus:ring-mainBlue" placeholder="Tell us size, grade, quantity and other requirements..."></textarea>
+            <textarea name="message" rows="4" required class="w-full border border-gray-400 rounded px-4 py-3 bg-white text-base" placeholder="Tell us size, grade, quantity and other requirements..."></textarea>
           </div>
           <button type="submit" class="w-full bg-blue-600 text-white py-3.5 rounded-lg font-medium text-lg hover:bg-blue-700">Submit Inquiry</button>
         </form>
@@ -453,12 +446,5 @@ button{border:none;cursor:pointer;}
  </div>
   </div>
 </footer>
-
-<script>
-document.getElementById("quoteForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  alert("Form submit simulated");
-})
-</script>
 </body>
 </html>
