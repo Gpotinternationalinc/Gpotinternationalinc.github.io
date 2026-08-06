@@ -23,9 +23,27 @@
         }
         .banner-wrap img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
         .banner-mask { position: absolute; inset: 0; background-color: rgba(0,0,0,0.42); }
-        /* 修复Safari强制禁止导航换行 */
-        .nav-no-wrap {
-            white-space: nowrap !important;
+
+        /* ========== Safari Flex导航强制修复关键样式 ========== */
+        .header-flex-wrap {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:4px;
+        }
+        .logo-block {
+            flex-shrink:0;
+            min-width:0 !important; /* 修复safari flex计算bug */
+            white-space:nowrap;
+        }
+        .nav-wrap {
+            display:flex;
+            gap:4px;
+            min-width:0 !important;
+        }
+        .nav-item {
+            white-space:nowrap !important;
+            min-width:0;
         }
     </style>
 
@@ -48,19 +66,19 @@
 </head>
 <body class="bg-white font-sans text-grayText">
 
-<!-- 【已修复导航：删除clamp，全浏览器兼容，永远同一行】 -->
+<!-- 导航【彻底修复Safari/安卓flex错位bug】 -->
 <header class="shadow-sm sticky top-0 bg-white z-50">
   <div class="max-w-7xl mx-auto px-2 py-2">
-    <div class="flex items-center justify-between gap-1 nav-no-wrap">
-      <a href="#" class="flex items-center gap-2 flex-shrink-0">
+    <div class="header-flex-wrap">
+      <a href="#" class="logo-block flex items-center gap-2">
         <img src="logo.jpg" alt="Gpot International Inc Logo" class="h-9 md:h-11 w-auto object-contain max-h-[44px]">
         <span class="text-sm md:text-base lg:text-lg font-bold text-mainBlue">Gpot International Inc</span>
       </a>
-      <nav class="flex gap-x-2 md:gap-x-5 flex-shrink-0">
-        <a href="#products" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Products</a>
-        <a href="#whyus" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Why Us</a>
-        <a href="#downloads" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Downloads</a>
-        <a href="#quote" class="text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue">Quote</a>
+      <nav class="nav-wrap">
+        <a href="#products" class="nav-item text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue px-1">Products</a>
+        <a href="#whyus" class="nav-item text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue px-1">Why Us</a>
+        <a href="#downloads" class="nav-item text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue px-1">Downloads</a>
+        <a href="#quote" class="nav-item text-xs md:text-sm lg:text-base text-gray-700 hover:text-mainBlue px-1">Quote</a>
       </nav>
     </div>
   </div>
@@ -300,7 +318,6 @@
   </div>
 </section>
 
-<!-- ========== 页脚Footer（修复锚点ID错误） ========== -->
 <footer class="bg-[#0f3460] text-white py-12">
   <div class="max-w-6xl mx-auto px-4 md:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -335,10 +352,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-// 原代码找不到quoteForm，删掉错误id监听，不影响formspree提交
-</script>
 
 </body>
 </html>
